@@ -1,0 +1,48 @@
+.preview_card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 70%;
+  padding : {
+    left: 30px;
+    right: 30px;
+  }
+  background-color: rgb(58, 209, 163);
+  border-radius: 20rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+
+  &:hover {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  }
+
+  img {
+    height: 7vh;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-right : 1rem;
+  }
+
+  .detail {
+    text-align: left;
+    h2 {
+      margin : {
+        top:10px;
+        bottom:0px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      h3 {
+        font-size: 2.5vw;
+      }
+    }
+  }
+
+}
+.minted {
+    background-color: rgb(32, 149, 202);
+  }
+
