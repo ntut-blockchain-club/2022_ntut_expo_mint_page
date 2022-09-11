@@ -12,31 +12,31 @@ async function Metamask(set_address) {
     const signer = provider.getSigner();
     set_address(accounts);
     
-    await window.ethereum.request({
-        method: "wallet_switchEthereumChain",
-        params: [
-          {
-            chainId: "0x4"
-          },
-        ],
-      });
-
     // await window.ethereum.request({
-    //     method: "wallet_addEthereumChain",
+    //     method: "wallet_switchEthereumChain",
     //     params: [
     //       {
-    //         chainId: "0x4",
-    //         rpcUrls: ["https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"],
-    //         chainName: "Rinkeby Test Network",
-    //         nativeCurrency: {
-    //           name: "RinkebyETH",
-    //           symbol: "RinkebyETH",
-    //           decimals: 18,
-    //         },
-    //         blockExplorerUrls: ["https://rinkeby.etherscan.io"],
+    //         chainId: "0x4"
     //       },
     //     ],
     //   });
+
+    await window.ethereum.request({
+        method: "wallet_addEthereumChain",
+        params: [
+          {
+            chainId: "0x89",
+            rpcUrls: ["https://rpc-mainnet.matic.quiknode.pro"],
+            chainName: "Polygon Mainnet",
+            nativeCurrency: {
+              name: "MATIC",
+              symbol: "MATIC",
+              decimals: 18,
+            },
+            blockExplorerUrls: ["https://polygonscan.com"],
+          },
+        ],
+      });
     }
     return;
   }

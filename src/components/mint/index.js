@@ -3,11 +3,9 @@ import fish_abi from "./fish.json";
 
 async function mint(uuid, set_finish, finish) {
   console.log(uuid);
-  console.log("before " + finish);
-  set_finish(false);
-  console.log("after " + finish);
+
   const provider = new ethers.providers.Web3Provider(window.ethereum);
-  const fish_Address = "0x82fdaD06074721156CA2D1B36Ed3BB055D7F53e1";
+  const fish_Address = "0xd1d859a7727Bb3E5B305C4168A44B93c809c07Eb";
   const fish_Contract = new ethers.Contract(fish_Address, fish_abi, provider);
   const signer = provider.getSigner();
   const test = await fish_Contract.mintable();
